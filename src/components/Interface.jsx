@@ -43,3 +43,28 @@ const AboutSection = () =>{
             </Section>
     )
 }
+const Skills = [
+    {
+        title: "Python, Java, C#",
+        level: 85
+    },
+    {
+        title:"NextJs",
+        level: 90
+    },
+    {
+        title: "Three Js / React Three Fiber",
+        level: 80
+    },
+    {
+        title: "MySQL, MongoDB",
+        level: 95
+    }
+]
+const languages = [
+    
+]
+
+const SkillsSection = () =>{
+
+}

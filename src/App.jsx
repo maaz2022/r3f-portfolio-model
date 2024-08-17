@@ -29,7 +29,9 @@ function App() {
           <color attach="background" args={["#e6e7ff"]} />
       <ScrollControls pages={4} damping={0.1}>
         <ScrollManager section={section} onSectionChange={setSection} />
-        <Experience section={section}/>
+        <Scroll>
+           <Experience section={section}/>
+        </Scroll>
           <Scroll html>
           <Interface />
       </Scroll>

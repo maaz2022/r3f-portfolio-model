@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { ScrollManager } from "./components/ScrollManager";
 import { Menu } from "./components/Menu";
 import { MotionConfig } from "framer-motion";
+import { framerMotionConfig } from "./config";
+import { Cursor } from "./components/Cursor";
 
 
 function App() {
@@ -18,11 +20,7 @@ function App() {
 <>
     <MotionConfig
     transition={{
-      type:"spring",
-      stiffness: 500,
-      damping: 50,
-      mass: 5,  
-      restDelta:0.0001,
+        ...framerMotionConfig
     }}
     >
       <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
@@ -30,7 +28,7 @@ function App() {
       <ScrollControls pages={4} damping={0.1}>
         <ScrollManager section={section} onSectionChange={setSection} />
         <Scroll>
-           <Experience section={section}/>
+           <Experience section={section} menuOpened={menuOpened}/>
         </Scroll>
           <Scroll html>
             <Interface />
@@ -38,6 +36,7 @@ function App() {
       </ScrollControls>
     </Canvas>
         <Menu  onSectionChange={setSection} menuOpened={menuOpened} setMenuOpened={setMenuOpened}/>
+        <Cursor/>
     </MotionConfig>
 </>
 

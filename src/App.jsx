@@ -8,6 +8,7 @@ import { Menu } from "./components/Menu";
 import { MotionConfig } from "framer-motion";
 import { framerMotionConfig } from "./config";
 import { Cursor } from "./components/Cursor";
+import { Leva } from "leva";
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
     </Canvas>
         <Menu  onSectionChange={setSection} menuOpened={menuOpened} setMenuOpened={setMenuOpened}/>
         <Cursor/>
+    <Leva hidden/>
+    
     </MotionConfig>
 </>
 

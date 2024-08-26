@@ -162,8 +162,8 @@ export function Office(props) {
       </motion.group>
       <group
         name="keyboard"
-        position={[-0.04, 0.98, -1.35]}
-        rotation={[0, -0.17, 0]}
+        position={[0.21, 0.98, -1.21]} 
+        rotation={[0, -0.22, 0]}   scale={0.63}
       >
         <mesh
           name="mesh425587018"
@@ -215,6 +215,7 @@ export function Office(props) {
         name="Comp_Mouse"
         geometry={nodes.Comp_Mouse.geometry}
         material={textureMaterial}
+        position={[-0.01, 0, 0.08]}
       />
       <motion.group 
               scale={[0,0,0]}
@@ -293,7 +294,9 @@ export function Office(props) {
         animate={{
           scale: section === 0 ? 1 : 0,
         }}
-      name="Chair" position={[-0.28, 0, -0.71]} rotation={[0, -0.38, 0]}>
+        name="Chair"         
+        position={[0.09, 0, -0.66]} 
+        rotation={[0, -0.35, 0]}>
         <mesh
           name="Node-Mesh"
           geometry={nodes["Node-Mesh"].geometry}

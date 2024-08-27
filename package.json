@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@formspree/react": "^2.5.1",
     "@react-three/drei": "9.75.0",
     "@react-three/fiber": "8.13.3",
+    "@stream-io/node-sdk": "^0.3.0",
     "@types/three": "0.152.1",
     "framer-motion": "^11.3.28",
     "framer-motion-3d": "^11.3.28",

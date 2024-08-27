@@ -8,46 +8,53 @@ import { useFrame } from '@react-three/fiber';
 import { useControls } from 'leva';
 import * as THREE from "three";
 export function Avatar(props) {
-    const {animation} = props;
-  const {headFollow, cursorFollow, wireFrame} = useControls({
-    headFollow: false, cursorFollow: false, wireFrame : false
-  })
+  const { animation, wireframe } = props;
+  const { headFollow, cursorFollow } = useControls({
+    headFollow: false,
+    cursorFollow: false,
+  });
+  const group = useRef();
+  const { nodes, materials } = useGLTF("models/66bc7d2bd68d5b80e2c563fc.glb");
 
-  const group = useRef(); 
-  const { nodes, materials } = useGLTF('models/66bc7d2bd68d5b80e2c563fc.glb')
-  const {animations: typingAnimation} = useFBX('animations/Typing.fbx');
-  const {animations: standingAnimation} = useFBX('animations/Standing Idle.fbx');
-  const {animations: fallingAnimation} = useFBX('animations/Falling Idle.fbx');
+  const { animations: typingAnimation } = useFBX("animations/Typing.fbx");
+  const { animations: standingAnimation } = useFBX(
+    "animations/Standing Idle.fbx"
+  );
+  const { animations: fallingAnimation } = useFBX(
+    "animations/Falling Idle.fbx"
+  );
 
-  typingAnimation[0].name="Typing";
-  standingAnimation[0].name="Standing";
-  fallingAnimation[0].name="Falling";
+  typingAnimation[0].name = "Typing";
+  standingAnimation[0].name = "Standing";
+  fallingAnimation[0].name = "Falling";
 
-  const {actions} = useAnimations([typingAnimation[0], standingAnimation[0], fallingAnimation[0]], group);
+  const { actions } = useAnimations(
+    [typingAnimation[0], standingAnimation[0], fallingAnimation[0]],
+    group
+  );
 
-  useFrame((state)=>{
-    if (headFollow){
+  useFrame((state) => {
+    if (headFollow) {
       group.current.getObjectByName("Head").lookAt(state.camera.position);
     }
-    
-    if (cursorFollow){
+    if (cursorFollow) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
-      group.current.getObjectByName("Spine").lookAt(target);
-    } 
-  });
-  
-  useEffect(()=>{
-    actions[animation].reset().fadeIn(0.5).play();
-    return()=>{
-      actions[animation].reset().fadeOut(0);
+      group.current.getObjectByName("Spine2").lookAt(target);
     }
-  },[animation]);
+  });
 
-  useEffect(()=>{
-    Object.values(materials).forEach((material)=>{
-      material.wireframe = wireFrame;
-    })
-  },[wireFrame])
+  useEffect(() => {
+    actions[animation].reset().fadeIn(0.5).play();
+    return () => {
+      actions[animation].reset().fadeOut(0.5);
+    };
+  }, [animation]);
+
+  useEffect(() => {
+    Object.values(materials).forEach((material) => {
+      material.wireframe = wireframe;
+    });
+  }, [wireframe]);
   return (
    <group {...props} ref={group} dispose={null}>
      <group rotation-x={-Math.PI/2}>

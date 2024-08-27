@@ -124,7 +124,7 @@ const SkillsSection = () =>{
                 <div className="mt-8 space-y-4 text-white">
                     {Skills.map((skill, index) => (
                         <div className="w-64" key={index}>
-                            <motion.h3 className="text-xl font-bold text-white" // Change to text-white
+                            <motion.h3 className="text-lg md:text-xl font-bold text-white" // Change to text-white
                                 initial={{ opacity: 0 }}
                                 variants={{
                                     visible: {
@@ -163,7 +163,7 @@ const SkillsSection = () =>{
                 <div className="mt-8 space-y-4 text-white">
                     {languages.map((lng, index) => (
                         <div className="w-64" key={index}>
-                            <motion.h3 className="text-xl font-bold text-white" // Change to text-white
+                            <motion.h3 className="text-lg md:text-xl font-bold text-white" // Change to text-white
                                 initial={{ opacity: 0 }}
                                 variants={{
                                     visible: {

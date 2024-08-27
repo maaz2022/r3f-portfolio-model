@@ -39,7 +39,7 @@ const AboutSection = (props) =>{
     const {setSection} = props;
     return(
             <Section>
-                <h1 className="text-6xl font-extrabold leading-snug">Hi, I'm
+                <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">Hi, I'm
                     <br />
                     <span className="bg-white px-3 italic">Muhammad Maaz</span>
                 </h1>

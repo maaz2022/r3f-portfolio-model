@@ -39,10 +39,12 @@ const AboutSection = (props) =>{
     const {setSection} = props;
     return(
             <Section>
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">Hi, I'm
-                    <br />
-                    <span className="bg-white px-3 italic">Muhammad Maaz</span>
+                <h1 className="text-4xl md:text-6xl font-extrabold leading-snug md:leading-tight mt-8 md:mb-0">
+                Hi, I'm
+                <br />
+                <span className="bg-white px-3 italic md:inline-block md:align-middle">Muhammad Maaz</span>
                 </h1>
+
                 <motion.p  className="text-lg text-black mt-4 md:text-gray-600"
                 initial={{
                     opacity: 0,

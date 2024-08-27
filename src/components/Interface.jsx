@@ -61,7 +61,7 @@ const AboutSection = (props) =>{
                 >
                     I'm a software developer from Pakistan 
                     <br />
-                    Learn how to build 3D apps.
+                    Go and explore my web world
                 </motion.p>
                 <motion.button 
                 onClick={() => setSection(3)}

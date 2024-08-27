@@ -6,7 +6,7 @@ import * as THREE from "three";
 const Background = () => {
   const material = useRef();
   const color = useRef({
-    color: "#b9bcff",
+    color: "#d0f2df",
   });
   const data = useScroll();
 
@@ -23,10 +23,10 @@ const Background = () => {
       color: "#212121",
     });
     tl.current.to(color.current, {
-      color: "#7a7ca5",
+      color: "#bbf2d3",
     });
     tl.current.to(color.current, {
-      color: "#9b96dd",
+      color: "#6deda5",
     });
   }, []);
 

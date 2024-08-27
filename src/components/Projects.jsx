@@ -26,13 +26,13 @@ export const projects = [
     description: "A Drive in which you can save your files",
   },
   {
-    title: "3D Scroll Animations",
+    title: "3D Scroll",
     url: "https://myweb-muhammadmaaz.vercel.app/",
     image: "projects/c.png",
     description: "Use React Three Fiber to create a 3D Mini Portfolio",
   },
   {
-    title: "Management System",
+    title: "Manag System",
     url: "https://github.com/maaz2022/SupplierManagementSys",
     image: "projects/system.jpg",
     description: "Real world management system (Desktop App)",

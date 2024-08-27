@@ -63,7 +63,7 @@ const AboutSection = (props) =>{
                 </motion.p>
                 <motion.button 
                 onClick={() => setSection(3)}
-                className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16`}
+                className={`bg-green-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16`}
                 initial={{
                     opacity: 0,
                     y: 50
@@ -140,7 +140,7 @@ const SkillsSection = () =>{
                             </motion.h3>
                             <div className="h-2 w-full bg-white rounded-full mt-2">
                                 <motion.div
-                                    className="h-full bg-indigo-500 rounded-full"
+                                    className="h-full bg-green-500 rounded-full"
                                     style={{ width: `${skill.level}%` }}
                                     initial={{ scaleX: 0, originX: 0 }}
                                     variants={{
@@ -179,7 +179,7 @@ const SkillsSection = () =>{
                             </motion.h3>
                             <div className="h-2 w-full bg-white rounded-full mt-2">
                                 <motion.div
-                                    className="h-full bg-indigo-500 rounded-full"
+                                    className="h-full bg-green-500 rounded-full"
                                     style={{ width: `${lng.level}%` }}
                                     initial={{ scaleX: 0, originX: 0 }}
                                     variants={{
@@ -216,14 +216,14 @@ const ProjectsSection = () => {
     <Section>
       <div className="flex w-full h-full gap-8 items-center justify-center">
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-green-600 transition-colors"
           onClick={previousProject}
         >
           ← Previous
         </button>
         <h2 className="text-5xl font-bold">Projects</h2>
         <button
-          className="hover:text-indigo-600 transition-colors"
+          className="hover:text-green-600 transition-colors"
           onClick={nextProject}
         >
           Next →
@@ -249,7 +249,7 @@ const ContactSection = () => {
               type="text"
               name="name"
               id="name"
-              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 p-3"
             />
             <label
               for="email"
@@ -261,7 +261,7 @@ const ContactSection = () => {
               type="email"
               name="email"
               id="email"
-              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+              className="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 p-3"
             />
             <ValidationError
               className="mt-1 text-red-500"
@@ -278,7 +278,7 @@ const ContactSection = () => {
             <textarea
               name="message"
               id="message"
-              className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 p-3"
+              className="h-32 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 p-3"
             />
             <ValidationError
               className="mt-1 text-red-500"
@@ -286,7 +286,7 @@ const ContactSection = () => {
             />
             <button
               disabled={state.submitting}
-              className="bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 "
+              className="bg-green-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16 "
             >
               Submit
             </button>

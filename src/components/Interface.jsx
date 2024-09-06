@@ -39,7 +39,7 @@ const AboutSection = (props) =>{
     const {setSection} = props;
     return(
             <Section>
-                <h1 className="text-4xl md:text-6xl font-extrabold leading-snug md:leading-tight mt-8 md:mb-0">
+                 <h1 className="text-4xl md:text-6xl font-extrabold leading-snug md:leading-tight mt-8 md:mb-0 ">
                 Hi, I'm
                 <br />
                 <span className="bg-white px-3 italic md:inline-block md:align-middle">Muhammad Maaz</span>
@@ -80,6 +80,7 @@ const AboutSection = (props) =>{
                 }}>
                     Contact Me
                 </motion.button>
+            
             </Section>
     )
 }
